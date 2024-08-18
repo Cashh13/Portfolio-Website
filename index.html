@@ -1848,6 +1848,22 @@ font-family: 'Inter', sans-serif; color: transparent;
     c.style.border = 'none'
     }
 
+    // removing tilt mobile ------------------------
+    
+    let t = document.getElementsByClassName("square-inner");
+
+function tilt() {
+  for (let i = 0; i < t.length; i++) {
+    if (window.innerWidth <= 900) {
+      t[i].removeAttribute('data-tilt');
+    } else {
+      t[i].setAttribute('data-tilt', '');
+    }
+  }
+}
+
+tilt(); 
+window.addEventListener('resize', tilt)
 
 
   </script>
